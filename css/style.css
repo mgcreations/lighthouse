@@ -1,0 +1,314 @@
+  
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+     v2.0 | 20110126
+     License: none (public domain)
+  */
+  
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+
+  /* --- Site Styling Starts Here --- */
+
+  html {
+      box-sizing: border-box;
+      font-family: 'Roboto' sans-serif;
+      font-size: 1em;
+      background-color: #1A1A1A;
+      color: #fff;
+  }
+
+  body {
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+  }
+
+
+  h1, h2, h3, h4, h5, h6 {
+    display: block;
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    color: #FCF69A;
+  }
+  
+  h1 {
+    font-size: 3.052em;
+  }
+  
+  h2 {
+    font-size: 2.441em;
+  }
+  
+  h3 {
+    font-size: 1.953em;
+  }
+  
+  h4 {
+    font-size: 1.563em;
+  }
+  
+  h5 {
+    font-size: 1.25em;
+  }
+  
+  h6 {
+    font-size: 0.8em;
+  }
+
+  .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto minmax(650px) 1fr;
+      grid-template-areas: 
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+
+  .header {
+      grid-area: header;
+  }
+
+  .main {
+      grid-area: main;
+  }
+
+  .footer {
+      grid-area: footer;
+  }
+
+  .nav-container {
+      width: 100%;
+  }
+
+  nav {
+      max-width: 1720px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto auto 1fr;
+  }
+
+  nav > :nth-child(3) {
+    max-width: 150px; /* 20% x 300px */
+  }
+
+  nav a {
+      color: #FCF69A;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: .3s all ease-in-out;
+  }
+
+  nav a:hover {
+      opacity: .7;
+  }
+
+  #nav-toggle, .burger-menu {
+      display: none;
+  }
+
+  .burger-menu {
+      width: 40px;
+  }
+
+  .burger-menu {
+      grid-column: 2;
+      align-self: center;
+      margin-left: 20px;
+      font-size: 2em;
+      color: #FCF69A;
+  }
+
+  @media only screen and (max-width: 1025px) {
+     
+    nav > :nth-child(3) {
+        max-width: 10% /* 20% x 300px */
+      }
+    
+    .burger-menu {
+          display: inline-block;
+      }
+
+      .left-menu {
+          display: none;
+      }
+
+      #nav-toggle:checked ~ .left-menu {
+          display: grid;
+          grid-row: 2;
+      }
+  }
+
+  .left-menu {
+      grid-column: 2;
+      align-self: center;
+      justify-self: center;
+      padding-left: 50px;
+  }
+
+  .left-menu a {
+      padding: 10px 0;
+      margin-left: 15px;
+      font-size: 1.15em;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+  }
+
+  .logo {
+      grid-column: 1;
+  }
+
+  .logo #img1 {
+      max-width: 100%;
+      height: auto !important;
+  }
+
+  .logo #img2 {
+      display: none;
+  }
+
+  @media only screen and (max-width: 1025px){
+      .logo #img1 {
+          display: none;
+      }
+
+      .logo #img2 {
+          display: block;
+      }
+  }
+
+  .right-menu {
+      grid-column: 3;
+      align-self: center;
+      justify-self: end;
+      font-size: 2em;
+      margin-right: 20px;
+      margin-left: 30px;
+  }
+
+  .cover {
+      width: 100%;
+      height: 65vh;
+      background-image: url("/images/Custom-Manufacturing.jpg");
+      background-size: cover;
+      background-position: center center;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+  }
+
+  .cover-text {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      justify-self: end;
+      align-self: center;
+      display: flex;
+      align-items: center;
+      width: 600px;
+      height: 100px;
+      background-color: #1A1A1A;
+  }
+
+  .cover-text h2 {
+      color: #FCF69A;
+      padding-left: 20px;
+      font-size: 2em;
+      text-transform: uppercase;
+      font-weight: bold;
+  }
+
+  .main-content {
+      margin: 0;
+  }
+
+  .intro {
+      background-color: #FCF69A;
+      color: #1A1A1A;
+      padding: 25px 50px;
+  }
+
+  .intro h1 {
+      margin: 0;
+      margin-bottom: 10px;      
+      color: #1A1A1A;
+      font-weight: bold;
+  }
+
+  .intro h3 {
+      margin: 0;
+      margin-bottom: 10px;
+      color: #1A1A1A;
+  }
+
+  .service {
+    box-sizing: border-box;
+    padding: 10px;
+    display: grid;      
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 10px;
+    
+  }
+
+  .service-box {
+      min-width: 320px;
+      padding: 20px;
+      background-color: #4D4D4D;
+      border-radius: 25px;
+  }
+
+  .service-box img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 15px;
+      padding-bottom: 10px;
+      width: 100%;
+      object-fit: contain;
+  }
+
+  .service-heading {
+    background-color: black;
+    width: 100%;
+  }
+
+  .service-box h4 {
+      text-align: center;
+      font-weight: bold;
+  }
+

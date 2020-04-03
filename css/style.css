@@ -90,6 +90,11 @@
   h6 {
     font-size: 0.8em;
   }
+  p {
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5em;
+  }
 
   .container {
       display: grid;
@@ -303,12 +308,19 @@
   }
 
   .service-heading {
-    background-color: black;
+    background-color: #333333;
     width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-radius: 10px;
   }
 
   .service-box h4 {
       text-align: center;
       font-weight: bold;
+  }
+
+  .service-box p {
+    text-align: center;
   }
 

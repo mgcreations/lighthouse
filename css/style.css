@@ -341,19 +341,24 @@
     grid-template-areas: 
       "logo navigation secondary social"
       "contact contact . newsletter";
+    grid-row-gap: 20px;
 }
   
   .footer-logo {
     grid-area: logo;
+    align-self: center;
+    justify-self: center;
   }
 
   .footer-nav {
     grid-area: navigation;
+    align-self: center;
     justify-self: center;
   }
 
   .footer-secondary-nav {
     grid-area: secondary;
+    align-self: center;
     justify-self: center;
   }
 
@@ -371,6 +376,7 @@
 
   .social-networks {
     border-bottom: 2px solid #f99639;
+    padding-bottom: 10px;
   }
 
   .social-networks h3 {
@@ -387,10 +393,12 @@
 
   .contact-block {
     grid-area: contact;
+    margin-top: 10px;
   }
 
   .newsletter {
     grid-area: newsletter;
+    margin-top: 10px;
   }
 
   .contact-block .newsletter {
@@ -448,14 +456,96 @@
     grid-area: bottom-line;
     display: grid;
     grid-template-columns: 7vw 8fr 4fr 7vw;
+    background-color: #444554;
   }
 
   .bottom-line p {
     grid-column: 2;
+    padding: 15px;
+  }
+
+  .bottom-line, .bottom-line a {
+    color: #fff;
   }
 
   .legal {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  
     justify-items: end;
+    align-self: center;
+  }
+
+  /* Footer Media Queries */
+
+  @media only screen and (max-width: 1025px) {
+    .footer {
+      height: 45vh;
+    }
+
+    .footer-nav, .footer-secondary-nav {
+      display: none;
+    }
+
+    .footer-container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 20vh 25vh;
+      grid-template-areas: 
+       "logo social"
+       "contact newsletter";
+    }
+
+    .bottom-line {
+      display: grid;
+      grid-template-columns: 7vw 1fr 7vw;
+    }
+
+    .bottom-line p {
+      justify-self: center;
+    }
+
+    .legal {
+      grid-column: 2 / -2;
+      justify-items: center;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .footer {
+      height: 95vh;
+    }
+
+    .footer-container {
+      grid-template-columns: 1fr;
+      grid-template-areas: "logo" "social" "newsletter" "contact";
+    }
+
+    .footer-logo, .contact-block {
+      justify-self: center;
+      align-self: center;
+    }
+
+    .social-networks, .newsletter {
+      padding: 3rem 0;
+    }
+
+    .contact-block a, .contact-block p {
+      margin: 0 auto;
+    }
+
+    .contact-block h3, .social-networks h3 {
+      line-height: 3rem;
+    }
+
+    .bottom-line {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .legal {
+      display: none;
+    }
+
+    .bottom-line p {
+      grid-column: 1;
+      justify-self: center;
+    }
   }

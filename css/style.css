@@ -433,7 +433,7 @@
   }
 
   .social-networks {
-    border-bottom: 2px solid #f99639;
+    border-bottom: 2px solid #FCF69A;
     padding-bottom: 10px;
   }
 
@@ -473,8 +473,8 @@
   }
 
   .contact-block a:hover {
-    border: 2px solid #f99639;
-    color: #f99639;
+    border: 2px solid #FCF69A;
+    color: #FCF69A;
   }
 
   .newsletter-text, .text-input {
@@ -493,7 +493,7 @@
     height: 2.25rem;
     color: #fff;
     border: none;
-    background-color: #f99639;
+    background-color: #FCF69A;
     width: 5rem;
     font-weight: bold;
   }

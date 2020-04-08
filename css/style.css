@@ -323,6 +323,64 @@
     text-align: center;
   }
 
+  .content {
+    padding: 50px;
+  }
+
+  .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    line-height: 50px;
+    letter-spacing: 1px;
+    padding: 0 0 20px;
+  }
+
+
+  /* Portfolio Styling */
+
+  .portfolio {
+    display: grid;
+    padding: 25px;
+    grid-gap: 15px;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-auto-flow: dense;
+  }
+
+  .item {
+    position: relative;
+  }
+
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* The overlay effect for the portfolio images */
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0,0,0);
+    background: rgb(0,0,0,0.5); /* Transparent black */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Mouse over effect, fade in overlay title */
+
+  .item:hover .overlay {
+    opacity: 1;
+  }
+
+
+
+  /* Footer Styling */
+
   .footer {
     grid-area: footer;
     color: #fff;

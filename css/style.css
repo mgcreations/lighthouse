@@ -354,6 +354,7 @@
 
   .item {
     position: relative;
+    border: 2px solid #FCF69A;
   }
 
   .item img {

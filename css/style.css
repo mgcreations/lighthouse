@@ -226,6 +226,13 @@
       margin-left: 30px;
   }
 
+  .right-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
+
+
   .cover {
       width: 100%;
       height: 65vh;
@@ -388,17 +395,16 @@
     padding: 4em 0;
     display: grid;
     grid-template-columns: 7vw 1fr 7vw;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
 }
 
   .footer-container { 
     grid-column: 2 / 3;
     display: grid; /* Acting as grid container */
     grid-template-columns: 2fr 2fr 2fr 3fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     grid-template-areas: 
-      "logo navigation secondary social"
-      "contact contact . newsletter";
+      "logo navigation secondary contact";
     grid-row-gap: 20px;
 }
   
@@ -424,43 +430,15 @@
     color: #fff;
   }
 
-  .social-networks {
-    grid-area: social;
-    display: grid; /* Acting as grid container */
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    justify-items: center;
-  }
-
-  .social-networks {
-    border-bottom: 2px solid #FCF69A;
-    padding-bottom: 10px;
-  }
-
-  .social-networks h3 {
-    grid-column: 1 / -1;
-  }
-
-  .facebook {
-    justify-self: right;
-  }
-
-  .instagram {
-    justify-self: left;
-  }
 
   .contact-block {
     grid-area: contact;
     margin-top: 10px;
+    
   }
 
-  .newsletter {
-    grid-area: newsletter;
-    margin-top: 10px;
-  }
-
-  .contact-block .newsletter {
-    align-self: end;
+  .contact-block h3 {
+    text-align: center;
   }
 
   .contact-block a{
@@ -469,7 +447,7 @@
     padding: 0.5rem;
     margin: 10px 0 0;
     text-align: center;
-    width: 70%;
+    width: 100%;
   }
 
   .contact-block a:hover {
@@ -477,38 +455,6 @@
     color: #FCF69A;
   }
 
-  .newsletter-text, .text-input {
-    text-align: center;
-  }
-
-  .text-input input {
-    border-radius: 0;
-  }
-
-  .text-input input:first-child {
-    height: 2rem;
-  }
-
-  .text-input input:last-child {
-    height: 2.25rem;
-    color: #fff;
-    border: none;
-    background-color: #FCF69A;
-    width: 5rem;
-    font-weight: bold;
-  }
-
-  .fas, .fab {
-    font-size: 1.5rem;
-  }
-
-  .newsletter-text icon, .newsletter-text p {
-    margin: 0 0 1.1rem;
-  }
-
-  .newsletter-text p {
-    line-height: 2rem;
-  }
 
   .bottom-line{
     grid-area: bottom-line;
@@ -539,7 +485,7 @@
 
   @media only screen and (max-width: 1025px) {
     .footer {
-      height: 45vh;
+      height: 35vh;
     }
 
     .footer-nav, .footer-secondary-nav {
@@ -548,10 +494,9 @@
 
     .footer-container {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 20vh 25vh;
+      grid-template-rows: 20vh;
       grid-template-areas: 
-       "logo social"
-       "contact newsletter";
+       "logo contact";
     }
 
     .bottom-line {
@@ -571,12 +516,12 @@
 
   @media screen and (max-width: 768px){
     .footer {
-      height: 110vh;
+      height: 65vh;
     }
 
     .footer-container {
       grid-template-columns: 1fr;
-      grid-template-areas: "logo" "social" "newsletter" "contact";
+      grid-template-areas: "logo" "contact";
     }
 
     .footer-logo, .contact-block {

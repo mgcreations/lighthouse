@@ -158,9 +158,18 @@
 
   @media only screen and (max-width: 1025px) {
      
-    nav > :nth-child(3) {
-        max-width: 10% /* 20% x 300px */
-      }
+    nav {
+      max-width: 1720px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 200px auto 80px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    nav {
+      grid-template-columns: 140px auto 80px;
+    }
+  }
     
     .burger-menu {
           display: inline-block;

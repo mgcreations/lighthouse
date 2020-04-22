@@ -167,9 +167,24 @@ nav a:hover {
 }
 
 @media only screen and (max-width: 1025px) {
-  nav > :nth-child(3) {
-    max-width: 10%;
+  nav {
+    max-width: 1720px;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 200px auto 80px;
+        grid-template-columns: 200px auto 80px;
   }
+}
+
+@media only screen and (max-width: 1025px) and (max-width: 480px) {
+  nav {
+    -ms-grid-columns: 140px auto 80px;
+        grid-template-columns: 140px auto 80px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
   .burger-menu {
     display: inline-block;
   }

@@ -189,15 +189,12 @@
       grid-column: 2;
       align-self: center;
       justify-self: center;
-      padding-left: 50px;
   }
 
   .left-menu a {
       padding: 10px 0;
       margin-left: 15px;
-      font-size: 1.15em;
-      font-weight: 700;
-      letter-spacing: 0.5px;
+      font-size: calc(7px + .8vw);
   }
 
   .logo {
@@ -213,6 +210,12 @@
       display: none;
   }
 
+  @media screen and (min-width: 1600px) {
+    .left-menu a {
+      font-size: 26px;
+    }
+  }
+
   @media only screen and (max-width: 1025px){
       .logo #img1 {
           display: none;
@@ -221,13 +224,15 @@
       .logo #img2 {
           display: block;
       }
+
   }
+
 
   .right-menu {
       grid-column: 3;
       align-self: center;
       justify-self: end;
-      font-size: 2em;
+      font-size: calc(12px + .8vw);
       margin-right: 20px;
       margin-left: 30px;
   }
@@ -236,6 +241,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
+  }
+
+  @media screen and (min-width: 1600px) {
+    .right-menu {
+      font-size: 26px;
+    }
   }
 
 

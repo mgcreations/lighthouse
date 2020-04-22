@@ -207,15 +207,12 @@ nav a:hover {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
-  padding-left: 50px;
 }
 
 .left-menu a {
   padding: 10px 0;
   margin-left: 15px;
-  font-size: 1.15em;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-size: calc(7px + .8vw);
 }
 
 .logo {
@@ -230,6 +227,12 @@ nav a:hover {
 
 .logo #img2 {
   display: none;
+}
+
+@media screen and (min-width: 1600px) {
+  .left-menu a {
+    font-size: 26px;
+  }
 }
 
 @media only screen and (max-width: 1025px) {
@@ -249,7 +252,7 @@ nav a:hover {
       align-self: center;
   -ms-grid-column-align: end;
       justify-self: end;
-  font-size: 2em;
+  font-size: calc(12px + .8vw);
   margin-right: 20px;
   margin-left: 30px;
 }
@@ -260,6 +263,12 @@ nav a:hover {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
+}
+
+@media screen and (min-width: 1600px) {
+  .right-menu {
+    font-size: 26px;
+  }
 }
 
 .cover {

@@ -125,12 +125,9 @@
       max-width: 1720px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: auto auto 1fr;
+      grid-template-columns: 350px auto 80px;
   }
 
-  nav > :nth-child(3) {
-    max-width: 150px; /* 20% x 300px */
-  }
 
   nav a {
       color: #FCF69A;
@@ -369,13 +366,13 @@
     position: absolute;
     bottom: 0;
     background: rgb(0,0,0);
-    background: rgb(0,0,0,0.5); /* Transparent black */
+    background: rgba(0,0,0,0.5); /* Transparent black */
     color: #f1f1f1;
     width: 100%;
     transition: .5s ease;
     opacity: 0;
     color: white;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
   }
 

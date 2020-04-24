@@ -1,4 +1,5 @@
-  
+$neon_color: #fff;
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -251,36 +252,51 @@
 
 
   .cover {
-      width: 100%;
-      height: 65vh;
-      background-image: url("/images/Custom-Manufacturing.jpg");
-      background-size: cover;
-      background-position: center center;
-      display: grid;
-      grid-template-rows: 1fr;
-      grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    width: 100%;  
+    height: 75vh;
+    background-image: url("/images/Custom-Manufacturing.jpg");
+    background-size: cover;
+    background-position: center center;
+    padding: 4rem 2rem;
+    /* Grid style */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-template-areas: ". heading_text";
   }
 
-  .cover-text {
-      grid-column-start: 2;
-      grid-column-end: 3;
-      justify-self: end;
-      align-self: center;
-      display: flex;
-      align-items: center;
-      width: 600px;
-      height: 100px;
-      background-color: #1A1A1A;
+  .cover > * {
+    color: $neon_color;
   }
 
-  .cover-text h2 {
-      color: #FCF69A;
-      padding-left: 20px;
-      font-size: 2em;
-      text-transform: uppercase;
-      font-weight: bold;
+  .cover > h1 {
+    grid-area: heading_text;
+    font-size: calc(3rem + .8vw);
+    line-height: calc(60px + .8vw);
+    padding-left: 50px;
+    transition: all 0.5s;
+    font-family: 'Audiowide', cursive;
+    text-transform: uppercase;
+    animation: neon1 1.5s ease-in-out infinite alternate;
   }
 
+  @media screen and (min-width:1600px) {
+    .cover > h1 {
+      font-size: 5rem;
+      line-height: calc(100px + .8vw);
+    }
+  }
+
+  @keyframes neon1 {
+    from {
+      text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #FF1177, 0 0 20px #FF1177, 0 0 25px #FF1177, 0 0 35px #FF1177, 0 0 50px #FF1177;
+    }
+    to {
+      text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #FF1177, 0 0 20px #FF1177, 0 0 25px #FF1177, 0 0 35px #FF1177, 0 0 50px #FF1177;
+    }
+  }
+  
   .main-content {
       margin: 0;
   }

@@ -1,4 +1,10 @@
 $neon_color: #fff;
+$white: #fff;
+$yellow: #fcf69a;
+$dark_grey: #1a1a1a;
+$grey: #333333;
+$footer_bg: #444554;
+$service_gb: #4d4d4d;
 
 * {
     -webkit-box-sizing: border-box;
@@ -48,8 +54,8 @@ $neon_color: #fff;
       box-sizing: border-box;
       font-family: 'Roboto' sans-serif;
       font-size: 1em;
-      background-color: #1A1A1A;
-      color: #fff;
+      background-color: $dark_grey;
+      color: $white;
   }
 
   body {
@@ -65,7 +71,7 @@ $neon_color: #fff;
     font-weight: normal;
     font-family: "Roboto", sans-serif;
     padding: 0;
-    color: #FCF69A;
+    color: $yellow;
   }
   
   h1 {
@@ -131,7 +137,7 @@ $neon_color: #fff;
 
 
   nav a {
-      color: #FCF69A;
+      color: $yellow;
       text-decoration: none;
       text-transform: uppercase;
       transition: .3s all ease-in-out;
@@ -154,7 +160,7 @@ $neon_color: #fff;
       align-self: center;
       margin-left: 20px;
       font-size: 2em;
-      color: #FCF69A;
+      color: $yellow;
   }
 
   @media only screen and (max-width: 1025px) {
@@ -302,22 +308,22 @@ $neon_color: #fff;
   }
 
   .intro {
-      background-color: #FCF69A;
-      color: #1A1A1A;
+      background-color: $yellow;
+      color: $dark_grey;
       padding: 25px 50px;
   }
 
   .intro h1 {
       margin: 0;
       margin-bottom: 10px;      
-      color: #1A1A1A;
+      color: $dark_grey;
       font-weight: bold;
   }
 
   .intro h3 {
       margin: 0;
       margin-bottom: 10px;
-      color: #1A1A1A;
+      color: $dark_grey;
   }
 
   .service {
@@ -332,7 +338,7 @@ $neon_color: #fff;
   .service-box {
       min-width: 320px;
       padding: 20px;
-      background-color: #4D4D4D;
+      background-color: $service_gb;
       border-radius: 25px;
   }
 
@@ -347,7 +353,7 @@ $neon_color: #fff;
   }
 
   .service-heading {
-    background-color: #333333;
+    background-color: $grey;
     width: 100%;
     padding: 10px 0;
     margin-bottom: 10px;
@@ -387,7 +393,7 @@ $neon_color: #fff;
 
   .item {
     position: relative;
-    border: 2px solid #FCF69A;
+    border: 2px solid $yellow;
   }
 
   .item img {
@@ -407,7 +413,7 @@ $neon_color: #fff;
     width: 100%;
     transition: .5s ease;
     opacity: 0;
-    color: white;
+    color: $white;
     padding: 30px;
     text-align: center;
   }
@@ -442,7 +448,7 @@ $neon_color: #fff;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid #FCF69A;
+    border: 2px solid $yellow;
   }
 
   .contact-form {
@@ -455,6 +461,15 @@ $neon_color: #fff;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 16px;
+
+    align-items: center;
+    justify-items: center;
+  }
+
+  input, textarea, select {
+    width: 80%;
+    font-size: 18px;
+    border-radius: 5px;
   }
 
   @media screen and (max-width: 768px) {
@@ -472,8 +487,8 @@ $neon_color: #fff;
 
   .footer {
     grid-area: footer;
-    color: #fff;
-    background: #1A1A1A;
+    color: $white;
+    background: $dark_grey;
     padding: 4em 0;
     display: grid;
     grid-template-columns: 7vw 1fr 7vw;
@@ -509,7 +524,7 @@ $neon_color: #fff;
   }
 
   .footer a {
-    color: #fff;
+    color: $white;
   }
 
 
@@ -525,7 +540,7 @@ $neon_color: #fff;
 
   .contact-block a{
     display: block;
-    border: 2px solid #fff;
+    border: 2px solid $white;
     padding: 0.5rem;
     margin: 10px 0 0;
     text-align: center;
@@ -533,8 +548,8 @@ $neon_color: #fff;
   }
 
   .contact-block a:hover {
-    border: 2px solid #FCF69A;
-    color: #FCF69A;
+    border: 2px solid $yellow;
+    color: $yellow;
   }
 
 
@@ -542,7 +557,7 @@ $neon_color: #fff;
     grid-area: bottom-line;
     display: grid;
     grid-template-columns: 7vw 8fr 4fr 7vw;
-    background-color: #444554;
+    background-color: $footer_bg;
   }
 
   .bottom-line p {
@@ -551,7 +566,7 @@ $neon_color: #fff;
   }
 
   .bottom-line, .bottom-line a {
-    color: #fff;
+    color: $white;
   }
 
   .legal {

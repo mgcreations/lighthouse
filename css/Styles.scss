@@ -438,6 +438,21 @@ $service_gb: #4d4d4d;
     }
   }
 
+  .form-response {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .response-container {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .response-container img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .map {
     position: relative;
     overflow: hidden;

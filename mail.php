@@ -16,7 +16,7 @@
 		
 		if (!$_POST['submit_pay'] == 'Submit_pay') 
 		{
-			header('Location: http://www.lhdsportswear.co.za/thank_you.html');
+			header('Location: https://www.lhdsportswear.co.za/thank_you.html');
 			
 		}
 
